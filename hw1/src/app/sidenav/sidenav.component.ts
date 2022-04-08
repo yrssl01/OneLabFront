@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
 
-  constructor() { }
+  constructor() { } 
+  isMain = true;
+  isAbout = false;
+  isContact = false;
+
+  page = 'main';
 
   ngOnInit(): void {
   }

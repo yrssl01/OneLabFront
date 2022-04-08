@@ -1,1 +1,36 @@
-<p>sidenav works!</p>
+<div class="sidenav" >
+    <button (click)="page = 'main'">Главная</button>
+    <button (click)="page = 'about'">О нас</button>
+    <button (click)="page = 'contact'">Контакты</button>
+</div>
+
+<div [ngSwitch]="page">
+    <div *ngSwitchCase="'main'">
+        <app-main></app-main>
+    </div>
+    <div *ngSwitchCase="'about'">
+        <app-about></app-about>
+    </div>
+    <div *ngSwitchCase="'contact'">
+        <app-contact></app-contact>
+    </div>
+</div>
+
+<!-- <div class="sidenav">
+    <button (click)="isMain = true; isAbout = false; isContact = false">Главная</button>
+    <button (click)="isMain = false; isAbout = true; isContact = false">О нас</button>
+    <button (click)="isMain = false; isAbout = false; isContact = true">Контакты</button>
+</div>
+<div class="container">
+    <div *ngIf="isMain">
+        <app-main></app-main>
+    </div>
+    <div *ngIf="isAbout">
+        <app-about></app-about>
+    </div>
+    <div *ngIf="isContact">
+        <app-contact></app-contact>
+    </div>
+</div> -->
+
+
