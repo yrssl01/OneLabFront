@@ -1,0 +1,22 @@
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: #cccccc;
+    border: 3px solid black ;
+}
+
+.is-red-box {
+    background: red;
+}
+
+.box2{
+    width: 100px;
+    height: 100px;
+    background: #cccccc;
+    border: 3px solid black ;
+}
+
+.redBox {
+    background: red;
+}
