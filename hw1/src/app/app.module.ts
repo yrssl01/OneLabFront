@@ -7,6 +7,8 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { MainComponent } from './main/main.component';
+import { ZoomDirective } from './shared/directives/zoom.directive';
+import { MypipePipe } from './shared/pipes/mypipe.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { MainComponent } from './main/main.component';
     HeaderComponent,
     AboutComponent,
     ContactComponent,
-    MainComponent
+    MainComponent,
+    ZoomDirective,
+    MypipePipe
   ],
   imports: [
     BrowserModule

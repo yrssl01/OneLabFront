@@ -12,4 +12,46 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  contacts = [
+    {
+      name: 'John',
+      number: 555,
+    },
+    {
+      name: 'Mike',
+      number: 111,
+    },
+    {
+      name: 'Bob',
+      number: 333,
+    },
+  ];
+
+  products = [
+    {
+      name: 'Банан',
+      category: 'Фрукт',
+    },
+    {
+      name: 'Картофель',
+      category: 'Овощь',
+    },
+    {
+      name: 'Говядина',
+      category: 'Мясо',
+    },
+    {
+      name: 'Курица',
+      category: 'Мясо',
+    },
+    {
+      name: 'Морковь',
+      category: 'Овощь',
+    },
+    {
+      name: 'Яблоко',
+      category: 'Фрукт',
+    }
+  ];
+  
 }

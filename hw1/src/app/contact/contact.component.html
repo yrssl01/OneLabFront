@@ -1,7 +1,9 @@
 <div class="container">
     <h1>Контакты</h1>
     <img src="./assets/Contact.png" alt="">
-    <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora aliquid facere voluptate porro fugit error, modi earum corrupti dolorum neque non? A dolorem accusantium ipsam recusandae ipsa eum, fugiat quibusdam.
-    </p>
+    <div *ngFor="let product of products | mypipe:'Мясо'">
+        <h5>Name: {{product.name}}</h5>
+        <h5>Category: {{product.category}}</h5>
+    </div>
+
 </div>
