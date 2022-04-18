@@ -9,8 +9,11 @@
 </div>
 
 <div *ngIf="feedback" class="savedFeedback">
-    <h4>{{feedback.name}}</h4>
-    <p>{{feedback.message}}</p>
+    <div class="textfield">
+        <p><b>Имя:</b> {{feedback.name}}</p>
+        <p><b>Комментарий:</b> {{feedback.message}}</p>
+    </div>
+    
     <button class="delete-btn" (click)="delete()">Удалить</button>
 </div>
 
