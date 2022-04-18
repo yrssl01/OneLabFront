@@ -1,0 +1,15 @@
+<div class="feedback">
+    <form [formGroup]="feedbackForm">
+        <label for="name">Имя:</label>
+        <input type="text" formControlName="name" id="name">
+        <label for="message">Комментарий:</label>
+        <textarea formControlName="message" id="message"></textarea>
+        <button type="submit" (click)="submit()">Отправить</button>
+    </form>
+</div>
+
+<div *ngIf="feedback" class="savedFeedback">
+    <p>{{feedback}}</p>
+    <button class="delete-btn" (click)="delete()">Удалить</button>
+</div>
+

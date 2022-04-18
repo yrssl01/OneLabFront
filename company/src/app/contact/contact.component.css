@@ -1,0 +1,56 @@
+input[type=text], textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: none;
+}
+
+textarea {
+    height: 150px;
+}
+
+button {
+    background-color: #20dd9d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background-color: red;
+}
+
+.delete-btn:hover {
+    background-color: #dd1515;
+}
+
+button:hover {
+    background-color: #179d70;
+}
+
+.feedback {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 30%;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.savedFeedback {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 2em;
+    width: 30%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
