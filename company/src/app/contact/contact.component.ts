@@ -23,7 +23,7 @@ export class ContactComponent implements OnInit {
   }
 
   display() {
-    this.feedback = this.feedbackService.getFromStorage();
+    this.feedback = JSON.parse(this.feedbackService.getFromStorage());
   }
 
   delete() {

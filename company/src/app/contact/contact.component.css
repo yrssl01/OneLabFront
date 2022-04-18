@@ -19,10 +19,14 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.3s;
+    display: block;
 }
 
 .delete-btn {
     background-color: red;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 .delete-btn:hover {

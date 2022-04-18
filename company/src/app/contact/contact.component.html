@@ -9,7 +9,8 @@
 </div>
 
 <div *ngIf="feedback" class="savedFeedback">
-    <p>{{feedback}}</p>
+    <h4>{{feedback.name}}</h4>
+    <p>{{feedback.message}}</p>
     <button class="delete-btn" (click)="delete()">Удалить</button>
 </div>
 
