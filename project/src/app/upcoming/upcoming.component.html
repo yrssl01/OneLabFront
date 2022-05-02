@@ -1,0 +1,13 @@
+<div class="container">
+    <div>
+        <h2>Ожидаемые фильмы</h2>
+    </div>
+    <div class="cards">
+        <div class="card" *ngFor="let movie of movies">
+            <a [routerLink]="['/movies', movie.id]"><img  src="{{posterPath+movie.poster_path}}" alt=""></a>
+            <p>Rating: {{movie.vote_average}}</p>
+            <h4>{{movie.title}}</h4>
+            <p>{{movie.release_date | date:'longDate'}}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+<div *ngIf="movie" class="container">
+    <div class="movie-card">
+        <div class="movie-poster">
+            <img src="{{originalPath+movie.poster_path}}" alt="">
+        </div>
+        <section>
+            <div class="movie-title">
+                <h1>{{movie.title}} ({{movie.release_date | date:'YYYY'}})</h1>
+                <p><span>{{movie.release_date | date:'dd/MM/YYYY'}}  •</span><span *ngFor="let genre of movie.genres"> {{genre.name}} </span> </p>
+            </div>
+            <div>
+                <b>Оценка зрителей: </b>{{movie.vote_average/10 | percent}}
+            </div>
+            <div class="movie-description">
+                <h3>Обзор</h3>
+                <p>{{movie.overview}}</p>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div *ngIf="movie" class="content">
+    <h3>В главных ролях</h3>
+    <div class="actors"  *ngIf="cast">
+        <div class="actor" *ngFor="let actor of cast">
+            <img src="{{originalPath+actor.profile_path}}" alt="">
+            <h4 id="text">{{actor.name}}</h4>
+            <p id="text">{{actor.character}}</p>
+        </div>
+    </div>
+    <div class="review-form">
+        <form [formGroup]="reviewForm">
+            <div>
+                <label for="name">Имя</label>
+                <input type="text" name="name" formControlName="name">
+            </div>
+            <div>
+                <label for="text">Текст</label>
+                <textarea name="text" formControlName="text"></textarea>
+            </div>
+            
+            <button type="submit" (click)="submit(movie.id)">Отправить</button>
+        </form>
+    </div>
+
+    <div class="review" *ngIf="review" >
+        <h4>Пользователь: {{review.name}}</h4>
+        <p>Рецензия: {{review.text}}</p>
+        <button class="delete-btn" (click)="deleteReview(movie.id)">Удалить</button>
+    </div>
+</div>

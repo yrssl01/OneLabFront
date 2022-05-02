@@ -1,0 +1,121 @@
+.container  {
+    font-family: sans-serif;
+    width: 100%;
+    position: relative;
+    margin-top: 4rem;
+
+}
+
+.content {
+    margin-left: 5%;
+    font-family: sans-serif;
+    position: relative;
+}
+
+.movie-card {
+    margin-left: 5%;
+    display: flex;
+    width: 80%;
+}
+
+.movie-title h1 {
+    font-size: 36px;
+}
+
+.movie-poster {
+    margin-right: 1rem;
+}
+
+.movie-poster img {
+    max-height: 450px;
+    border-radius: 10px;
+}
+
+.movie-description {
+    text-align: justify;
+    width: 80%;
+}
+
+.actors {
+    display: flex;
+    width: 85%;
+    flex-direction: row;
+    min-height: 250px;
+    justify-content: space-between;   
+}
+  
+.actor {  
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-right: 2em;
+    box-shadow: 5px 5px 5px -5px #223c50;
+}
+
+#text {
+    padding: 0px 10px;
+    margin: 10px 5px;
+}
+
+.actor img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;  
+    object-fit: cover;
+    width: 100%;
+    height: 175px;
+}
+
+.review-form {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 30%;
+    margin-top: 1em;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    font-size: 14px;
+}
+
+input[type=text], textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 8px;
+    resize: none;
+}
+
+
+textarea {
+    height: 150px;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    border-radius: 45px;
+    background: #a8eb12;
+    border: 1px solid;
+    transition: all 1s ease;
+    transition-delay: 0.2s;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.delete-btn {
+    background: #eb4812;
+    border: 1px solid #000;
+    color: white;
+}
+
+.review {
+    padding: 10px;
+    background-color: white;
+    border-radius: 15px;
+    width: 90%;
+}
+
+
+
