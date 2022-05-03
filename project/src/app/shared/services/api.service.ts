@@ -56,4 +56,10 @@ export class ApiService {
       alert('Movie is already in favorite');
   }
 
+  deleteFromFavorites(movie: Movie) {
+    let array:Movie[] = this.getFavorites() || [];
+    array = array.filter((item) => item.id !== movie.id);
+    localStorage.setItem('favorites', JSON.stringify(array));
+  }
+
 }

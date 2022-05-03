@@ -21,6 +21,7 @@ export class MovieDetailsComponent implements OnInit {
   review: Review | undefined;
   movie: Movie | undefined;
   cast: Cast[] | undefined;
+  isFavorite: string = 'no';
   originalPath: string = 'https://image.tmdb.org/t/p/original/';
 
   constructor(private apiService: ApiService, private route: ActivatedRoute, private movieReviewService: MovieReviewService) { }
@@ -30,12 +31,18 @@ export class MovieDetailsComponent implements OnInit {
     const movieIdFromRoute = Number(routeParams.get('movieId'));
     this.apiService.getMovie(movieIdFromRoute).subscribe((res: Movie) => {
       this.movie = res;
+      if (this.apiService.getFavorites().filter(m => m.id === this.movie?.id).length > 0){
+        console.log('true');
+        this.isFavorite = 'yes';
+      }
       this.display('movie_'+this.movie.id);
       this.apiService.getCredits(this.movie.id)
       .subscribe((x: Credits) => {
         this.cast = x.cast.slice(0, 9);
       });
     });
+
+
     
   }
 
@@ -60,5 +67,9 @@ export class MovieDetailsComponent implements OnInit {
   addToFavorite(movie: Movie) {
     this.apiService.addToFavorite(movie);
   } 
+
+  deleteFromFavorite(movie: Movie) {
+    this.apiService.deleteFromFavorites(movie);
+  }
 
 }

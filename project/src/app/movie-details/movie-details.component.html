@@ -3,7 +3,11 @@
         <div class="movie-poster">
             <img src="{{originalPath+movie.poster_path}}" alt="">
         </div>
-        <button (click)="addToFavorite(movie)">В избранное</button>
+        <div [ngSwitch]="isFavorite">
+            <button *ngSwitchCase="'no'" (click)="addToFavorite(movie);isFavorite = 'yes'">В избранное</button>
+            <button *ngSwitchCase="'yes'" class="delete-btn" (click)="deleteFromFavorite(movie);isFavorite = 'no'">Удалить из избранного</button>
+        </div>
+        <!-- <button (click)="addToFavorite(movie)">В избранное</button> -->
         <section>
             <div class="movie-title">
                 <h1>{{movie.title}} ({{movie.release_date | date:'YYYY'}})</h1>

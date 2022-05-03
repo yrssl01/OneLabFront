@@ -9,4 +9,5 @@
 - [x] Search movie using RxJS
 - [x] Store and get review form value using LocalStorage 
 - [x] Use ngFor, ngIf
+- [x] Movie favorites
  
