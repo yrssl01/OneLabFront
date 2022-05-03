@@ -42,7 +42,7 @@ export class ApiService {
 
   getFavorites(): Movie[] {
     let dataFromStorage = localStorage.getItem('favorites');
-    this.favorites = JSON.parse(dataFromStorage || '{}');
+    this.favorites = JSON.parse(dataFromStorage || '[]');
     return this.favorites;
   }
 
