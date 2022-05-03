@@ -33,13 +33,26 @@
             <div>
                 <label for="name">Имя</label>
                 <input type="text" name="name" formControlName="name">
+                <div appError *ngIf="reviewFormCtrl(reviewForm, 'name')?.required">
+                    Обязательное поле
+                </div>
+                <div appError *ngIf="reviewFormCtrl(reviewForm, 'name')?.minlength">
+                    Минимальное количество символов: 3
+                </div>
             </div>
             <div>
                 <label for="text">Текст</label>
                 <textarea name="text" formControlName="text"></textarea>
+                <div appError *ngIf="reviewFormCtrl(reviewForm, 'text')?.required">
+                    Обязательное поле
+                </div>
             </div>
             
-            <button type="submit" (click)="submit(movie.id)">Отправить</button>
+            <button type="submit" 
+            [disabled]="reviewFormCtrl(reviewForm, 'name')?.required || 
+            reviewFormCtrl(reviewForm, 'name')?.minlength ||
+            reviewFormCtrl(reviewForm, 'text')?.required" 
+            (click)="submit(movie.id)">Отправить</button>
         </form>
     </div>
 

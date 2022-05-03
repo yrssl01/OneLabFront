@@ -104,6 +104,11 @@ button {
     margin-right: 0;
 }
 
+button:disabled {
+    background-color: #ccc;
+    cursor: default;
+}
+
 .delete-btn {
     background: #eb4812;
     border: 1px solid #000;

@@ -14,8 +14,8 @@ import { MovieReviewService } from '../shared/services/movie-review.service';
 export class MovieDetailsComponent implements OnInit {
 
   reviewForm: FormGroup = new FormGroup({
-    name: new FormControl(),
-    text: new FormControl(),
+    name: new FormControl('',[Validators.required, Validators.minLength(3)]),
+    text: new FormControl('',Validators.required),
   });
 
   review: Review | undefined;
@@ -37,6 +37,10 @@ export class MovieDetailsComponent implements OnInit {
       });
     });
     
+  }
+
+  reviewFormCtrl(form: FormGroup, ctrlName: string): any {
+    return form.get(ctrlName)?.errors;
   }
 
   display(movieId: string) {

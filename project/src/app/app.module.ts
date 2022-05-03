@@ -13,6 +13,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { MovieReviewService } from './shared/services/movie-review.service';
 import { ApiService } from './shared/services/api.service';
 import { ActorsComponent } from './actors/actors.component';
+import { ErrorDirective } from './shared/directives/error.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ActorsComponent } from './actors/actors.component';
     MovieDetailsComponent,
     UpcomingComponent,
     NotFoundComponent,
-    ActorsComponent
+    ActorsComponent,
+    ErrorDirective
   ],
   imports: [
     BrowserModule,
