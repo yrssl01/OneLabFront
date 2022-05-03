@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Credits, Movie, UpcomingMovies, PopularMovies } from '../interfaces/movies.interface';
+import { Credits, Movie, UpcomingMovies, PopularMovies, ResultsActor } from '../interfaces/movies.interface';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -15,6 +15,10 @@ export class ApiService {
 
   getCredits(id: number): Observable<Credits> {
     return this.httpClient.get<Credits>(`${this.apiUrl}movie/`+id+`/credits?api_key=${this.apiKey}&language=ru-RU`)
+  }
+
+  getActors(): Observable<ResultsActor> {
+    return this.httpClient.get<ResultsActor>(`${this.apiUrl}person/popular?api_key=${this.apiKey}&language=ru-RU`);
   }
 
   getMovies(params = {}): Observable<PopularMovies> {

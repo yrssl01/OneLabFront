@@ -41,6 +41,22 @@ export interface Cast {
     profile_path: string;
 }
 
+export interface Actor {
+    profile_path: string;
+    adult: boolean;
+    id: string;
+    known_for: Movie[];
+    name: string;
+    popularity: number;
+}
+
+export interface ResultsActor {
+    page: number;
+    results: Actor[];
+    total_results: number;
+    total_pages: number;
+}
+
 export interface PopularMovies {
     page: number;
     results: Movie[];

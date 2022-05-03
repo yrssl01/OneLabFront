@@ -1,0 +1,12 @@
+
+<div class="container">
+    <div>
+        <h2>Популярные Люди</h2>
+    </div>
+    <div class="cards">
+        <div class="card" *ngFor="let person of actors">
+            <img  src="{{profilePath+person.profile_path}}" alt="">
+            <h4>{{person.name}}</h4>
+        </div>
+    </div>
+</div>

@@ -12,6 +12,7 @@ import { UpcomingComponent } from './upcoming/upcoming.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { MovieReviewService } from './shared/services/movie-review.service';
 import { ApiService } from './shared/services/api.service';
+import { ActorsComponent } from './actors/actors.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ApiService } from './shared/services/api.service';
     MoviesComponent,
     MovieDetailsComponent,
     UpcomingComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ActorsComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +45,10 @@ import { ApiService } from './shared/services/api.service';
       {
         path: 'upcoming',
         component: UpcomingComponent
+      },
+      {
+        path: 'actors',
+        component: ActorsComponent
       },
       {
         path: '**',
