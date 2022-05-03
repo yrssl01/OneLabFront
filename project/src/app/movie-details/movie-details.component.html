@@ -3,6 +3,7 @@
         <div class="movie-poster">
             <img src="{{originalPath+movie.poster_path}}" alt="">
         </div>
+        <button (click)="addToFavorite(movie)">В избранное</button>
         <section>
             <div class="movie-title">
                 <h1>{{movie.title}} ({{movie.release_date | date:'YYYY'}})</h1>

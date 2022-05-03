@@ -1,4 +1,39 @@
-h1 {
+h1, h2 {
     text-align: center;
     margin: 30px 0;
+}
+
+.cards {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    font-family: sans-serif;
+}
+
+.card {
+    border: 1px solid rgb(150, 150, 150);
+    border-radius: 10px;
+    transition: 300ms;
+}
+
+.card img {
+    cursor: pointer;
+    width: 100%;
+    border-radius: 10px;
+    min-height: 274px;
+}
+
+.card h4 {
+    margin: 5px 5px;
+}
+
+.card p {
+    margin: 0;
+    padding: 10px;
+}
+
+.card p svg {
+    padding-right: 5px;
 }

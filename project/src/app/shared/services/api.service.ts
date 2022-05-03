@@ -10,6 +10,7 @@ export class ApiService {
 
   apiUrl = 'https://api.themoviedb.org/3/';
   apiKey = '865314ec08746bfeadf25d86efdafb42';
+  favorites:Movie[] = [];
 
   constructor(private httpClient: HttpClient) { }
 
@@ -37,6 +38,22 @@ export class ApiService {
   searchMovies(params = {}): Observable<PopularMovies> {
     return this.httpClient.get<PopularMovies>(`${this.apiUrl}search/movie?api_key=${this.apiKey}&language=ru-RU`,
     { params })
+  }
+
+  getFavorites(): Movie[] {
+    let dataFromStorage = localStorage.getItem('favorites');
+    this.favorites = JSON.parse(dataFromStorage || '{}');
+    return this.favorites;
+  }
+
+  addToFavorite(movie: Movie) {
+    let array:Movie[] = this.getFavorites() || [];
+    if (!array.includes(movie)) {
+      array.push(movie);
+      localStorage.setItem('favorites',JSON.stringify(array));
+    }
+    else 
+      alert('Movie is already in favorite');
   }
 
 }

@@ -57,4 +57,8 @@ export class MovieDetailsComponent implements OnInit {
     this.movieReviewService.deleteFromStorage('movie_'+movieId);
   }
 
+  addToFavorite(movie: Movie) {
+    this.apiService.addToFavorite(movie);
+  } 
+
 }

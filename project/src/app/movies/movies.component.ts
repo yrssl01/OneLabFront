@@ -29,7 +29,6 @@ export class MoviesComponent extends BaseComponent implements OnInit {
       )
     .subscribe((res: PopularMovies) => {
       if (res && res.results) {
-        console.log(res.results);
         this.movies = res.results;
       }
     });
