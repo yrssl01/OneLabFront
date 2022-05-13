@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class ApiService {
 
   apiUrl = 'https://api.themoviedb.org/3/';
-  apiKey = '865314ec08746bfeadf25d86efdafb42';
+  apiKey = '###';
   favorites:Movie[] = [];
 
   constructor(private httpClient: HttpClient) { }
